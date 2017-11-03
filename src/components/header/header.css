@@ -1,0 +1,77 @@
+header {
+  background-color: #222;
+  height: 180px;
+  padding: 40px; }
+  header .title-container {
+    display: flex;
+    font-family: 'Righteous', cursive;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 40px;
+    margin-top: 25px; }
+  header .logo {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    header .logo .earth {
+      animation: earth-rotation 4s linear infinite;
+      height: 100px; }
+    header .logo .rocket-container {
+      margin-left: -75px; }
+      header .logo .rocket-container div {
+        animation: spin 15s linear infinite;
+        width: 50px;
+        height: 50px; }
+        header .logo .rocket-container div img {
+          transform: translateX(-60px) translateY(-60px);
+          width: 50px; }
+    header .logo .star-container div {
+      animation: star-falling 1s linear infinite;
+      width: 50px;
+      height: 50px; }
+      header .logo .star-container div img {
+        width: 50px; }
+        header .logo .star-container div img.i-1 {
+          transform: translateX(-120px) translateY(-200px); }
+        header .logo .star-container div img.i-2 {
+          transform: translateX(-200px) translateY(200px); }
+    header .logo .ufo-container {
+      display: flex; }
+      header .logo .ufo-container div {
+        width: 70px;
+        height: 70px;
+        animation: ufo-animation 10s linear infinite; }
+        header .logo .ufo-container div img {
+          transform: translateX(-360px) translateY(-60px);
+          width: 70px; }
+
+@keyframes spin {
+  to {
+    transform: rotateZ(360deg); } }
+
+@keyframes ufo-animation {
+  0% {
+    transform: translateX(-60px) translateY(-60px); }
+  25% {
+    transform: translateX(190px) translateY(300px) rotateZ(40deg); }
+  50% {
+    transform: translateX(600px) translateY(80px) rotateZ(10deg); }
+  75% {
+    transform: translateX(790px) translateY(200px) rotateZ(40deg); }
+  100% {
+    transform: translateX(790px) translateY(-120px); } }
+
+@keyframes star-falling {
+  to {
+    transform: translateY(400px) translateX(200px); } }
+
+@keyframes earth-rotation {
+  0% {
+    margin-bottom: 0; }
+  50% {
+    margin-bottom: 20px; }
+  75% {
+    margin-top: 20px; }
+  100% {
+    margin-top: 0; } }
